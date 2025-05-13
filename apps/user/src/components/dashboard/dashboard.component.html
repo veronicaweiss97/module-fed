@@ -1,0 +1,74 @@
+<div class="dashboard-container">
+    <!-- Tab Navigation -->
+    <div class="tabs">
+        <button class="tab-button" [class.active]="activeTab === 1" (click)="setActiveTab(1)">
+            <span>User Info</span>
+        </button>
+        <button class="tab-button" [class.active]="activeTab === 2" (click)="setActiveTab(2)">
+            <span>Diagram</span>
+        </button>
+    </div>
+
+
+
+    <div *ngIf="activeTab === 1" class="tab-content">
+        <div class="modern-table-wrapper">
+            <table class="modern-table">
+                <tbody>
+                    <tr>
+                        <th>Full Name</th>
+                        <td>Jane Doe</td>
+                        <th>Email</th>
+                        <td>jane.doeyourorg.com</td>
+                    </tr>
+                    <tr>
+                        <th>Department</th>
+                        <td>Engineering</td>
+                        <th>Role</th>
+                        <td>Frontend Developer</td>
+                    </tr>
+                    <tr>
+                        <th>Employee ID</th>
+                        <td>#A123456</td>
+                        <th>Status</th>
+                        <td><span class="status-active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <th>Last Login</th>
+                        <td>2025-05-11 09:42</td>
+                        <th>Vacation Days Left</th>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <th>Planned Hours</th>
+                        <td>160</td>
+                        <th>Worked Hours</th>
+                        <td>124</td>
+                    </tr>
+                    <tr>
+                        <th>Employee laptop</th>
+                        <td>yes</td>
+                        <th>Laptop ID</th>
+                        <td>MAC OS 13284327ydw</td>
+                    </tr>
+                    <tr>
+                        <th>Insurance</th>
+                        <td>ARGO</td>
+                        <th>Plan</th>
+                        <td>AM+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+    </div>
+    <div *ngIf="activeTab === 2" class="tab-content">
+        <div class="diagram">
+            <img src="https://www.inetsoft.com/images/screenshots/HR-attrition-analytics.png" alt="diagram">
+            <!-- <canvas id="working-hours-chart"></canvas> -->
+        </div>
+    </div>
+</div>

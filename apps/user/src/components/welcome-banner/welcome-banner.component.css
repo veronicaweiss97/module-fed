@@ -1,0 +1,177 @@
+/* Container for the welcome banner */
+.welcome-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #c957923d;
+  color: #3d365c;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 0 2rem;
+  border-radius: 20px;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.greeting {
+  margin-bottom: 2rem;
+}
+
+.greeting h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7c4585;
+}
+
+.greeting p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #c95792;
+}
+
+.stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction with the stars */
+}
+
+/* Star styling */
+.star {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  opacity: 0;
+  animation: shine 3s infinite ease-in-out;
+}
+
+/* Random position and timing for each star */
+.star-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+.star-2 {
+  top: 40%;
+  left: 50%;
+  animation-delay: 1s;
+}
+.star-3 {
+  top: 60%;
+  left: 80%;
+  animation-delay: 2s;
+}
+.star-4 {
+  top: 30%;
+  left: 70%;
+  animation-delay: 1.5s;
+}
+.star-5 {
+  top: 80%;
+  left: 30%;
+  animation-delay: 0.5s;
+}
+.star-6 {
+  top: 10%;
+  left: 90%;
+  animation-delay: 2.5s;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.writing-animation {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #c95792;
+  margin-top: 1rem;
+}
+
+.book-icon {
+  font-size: 3rem;
+  position: absolute;
+  top: -90px;
+  left: 40px;
+}
+
+.pencil-icon {
+  font-size: 2rem;
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  animation: pencil-writing 4s infinite ease-in-out;
+}
+
+.writing-text {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #7c4585;
+  padding-left: 40px;
+  animation: writing-text-animation 4s steps(20) infinite;
+}
+
+@keyframes pencil-writing {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 20px;
+  }
+  50% {
+    left: 25px;
+  }
+  75% {
+    left: 20px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes writing-text-animation {
+  0% {
+    width: 0;
+    overflow: hidden;
+  }
+  100% {
+    width: 100%;
+    overflow: hidden;
+  }
+}
