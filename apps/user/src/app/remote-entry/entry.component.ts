@@ -2,11 +2,18 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WelcomeBannerComponent } from '../../components/welcome-banner/welcome-banner.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
+import { PortalUiLibComponent } from '@libs/portal-ui-lib';
 
 @Component({
-  imports: [CommonModule, WelcomeBannerComponent, DashboardComponent],
+  imports: [
+    CommonModule,
+    WelcomeBannerComponent,
+    DashboardComponent,
+    PortalUiLibComponent,
+  ],
   selector: 'app-user-entry',
-  template: `<app-welcome-banner></app-welcome-banner>
+  template: `<lib-portal-ui-lib></lib-portal-ui-lib>
+    <app-welcome-banner></app-welcome-banner>
     <app-dashboard></app-dashboard>`,
 })
 export class RemoteEntryComponent {}

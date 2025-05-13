@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.banner-container {
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(135deg, #3d365c, #7c4585, #c95792);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(201, 87, 146, 0.5);
+}
+
+.banner-message {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  animation: textPulse 2.5s ease-in-out infinite;
+}
+
+.neon-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: conic-gradient(
+    #f8b55f 0deg,
+    #c95792 90deg,
+    #7c4585 180deg,
+    #3d365c 270deg,
+    #f8b55f 360deg
+  );
+  animation: spinBorder 4s linear infinite;
+  z-index: 0;
+  filter: blur(4px);
+}
+
+@keyframes spinBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes textPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #f8b55f, 0 0 20px #c95792;
+  }
+  50% {
+    text-shadow: 0 0 20px #f8b55f, 0 0 30px #c95792;
+  }
+}
