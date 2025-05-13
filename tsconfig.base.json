@@ -18,6 +18,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@module-fed/portal-directives": [
+        "libs/portal-directives/src/index.ts"
+      ],
       "@module-fed/portal-ui-lib": [
         "libs/portal-ui-lib/src/index.ts"
       ],
@@ -26,9 +29,6 @@
       ],
       "user/Routes": [
         "apps/user/src/app/remote-entry/entry.routes.ts"
-      ],
-      "@libs/portal-ui-lib": [
-        "libs/portal-ui-lib/src/index.ts"
       ]
     }
   },

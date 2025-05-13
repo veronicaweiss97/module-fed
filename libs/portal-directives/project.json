@@ -1,0 +1,13 @@
+{
+  "name": "portal-directives",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/portal-directives/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["ui", "directives"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WelcomeBannerComponent } from '../../components/welcome-banner/welcome-banner.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
-import { PortalUiLibComponent } from '@libs/portal-ui-lib';
+import { PortalUiLibComponent } from '@module-fed/portal-ui-lib';
 
 @Component({
   imports: [
